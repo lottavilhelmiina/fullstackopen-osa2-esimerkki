@@ -45,10 +45,13 @@ const App = (props) => {
         <input value={newNote} onChange={handleNoteChange} />
         <button type="submit">save</button>
       </form>
+      <br />
+      <span>
+        Jos haluat mapata jotain samalle riville, käytä <b>span</b>-tägiä:{" "}
+      </span>
       {notes.map(
         // ylempi tapa mapata toimii niin kuin sitä edeltäväkin tapa
         (note) => (
-          //span toimii, jos halutaan renderöidä sisältö samalle riville
           <span key={note.id} note={note}>
             {note.id}{" "}
           </span>
